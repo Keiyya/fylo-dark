@@ -1,0 +1,14 @@
+{
+  "name": "fylo-dark",
+  "version": "1.0.0",
+  "description": "FYLO Dark",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "author": "Alexander Kihia",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
