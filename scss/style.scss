@@ -23,8 +23,275 @@ html:focus-within {
 body {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  background-color: $dark-blue-intro;
+  color: $white;
+  background-image: url('../images/bg-curvy-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 35%;
+  background-size: 100%;
 }
 
-h1 {
+h1,
+h2,
+h3,
+button {
   font-family: 'Raleway', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 2rem 3rem;
+  margin: 0 auto;
+}
+
+.btn {
+  border: 0;
+  outline: none;
+  background-color: $cyan;
+  color: $white;
+  padding: 0.5rem 2.6rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($cyan, 9);
+  }
+}
+
+header {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        list-style: none;
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  #header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 5rem;
+
+      h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+        width: 600px;
+        margin-bottom: 1.3rem;
+      }
+
+      p {
+        width: 450px;
+      }
+
+      button {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+#features {
+  padding-top: 2rem;
+  background-color: $dark-blue-main;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4rem;
+    place-content: center;
+    align-items: center;
+
+    .item {
+      text-align: center;
+    }
+  }
+}
+
+#team {
+  background-color: $dark-blue-main;
+  padding-top: 3rem;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 50%;
+    }
+
+    .content {
+      width: 50%;
+      margin: 0 2rem;
+
+      h2 {
+        font-size: 1.7rem;
+        max-width: 300px;
+        line-height: 1.7;
+      }
+
+      p {
+        max-width: 450px;
+        margin: 1rem 0;
+        line-height: 1.4;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: $cyan;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+
+        img {
+          width: 1.3rem;
+          margin-left: 0.4rem;
+        }
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+#testimonials {
+  background-color: $dark-blue-main;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.4rem;
+
+    .card {
+      background: $dark-blue-testimonials;
+      padding: 1.5rem 1rem;
+      border-radius: 0.6rem;
+      box-shadow: 3px 3px 3px 7px lighten($dark-blue-main, 6);
+
+      &-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+
+        img {
+          width: 50px;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+
+        .card-title {
+          h3 {
+            font-size: 1rem;
+          }
+
+          p {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $dark-blue-footer;
+  padding: 3rem 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    img {
+      margin-bottom: 1.8rem;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
+
+      .location {
+        grid-column: span 2;
+      }
+
+      .phone,
+      .email {
+        margin: 0.7rem 0;
+      }
+
+      .item {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+
+        img {
+          margin-right: 0.6rem;
+        }
+      }
+
+      ul {
+        li {
+          list-style: none;
+          margin: 0.6rem;
+        }
+      }
+
+      .icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        div {
+          border: 1px solid $white;
+          padding: 0.6rem 0.8rem;
+          border-radius: 50%;
+          margin: 0 0.4rem;
+          cursor: pointer;
+
+          &:hover {
+            color: $cyan;
+            border: 1px solid $cyan;
+          }
+        }
+      }
+    }
+  }
 }
