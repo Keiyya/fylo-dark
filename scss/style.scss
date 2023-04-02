@@ -190,6 +190,7 @@ header {
   background-color: $dark-blue-main;
   padding-top: 2rem;
   padding-bottom: 4rem;
+  position: relative;
 
   .container {
     display: flex;
@@ -223,6 +224,54 @@ header {
           p {
             font-size: 0.6rem;
           }
+        }
+      }
+    }
+  }
+
+  #cta {
+    position: absolute;
+    left: 25%;
+    background: $dark-blue-intro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 1rem 1.4rem;
+    margin: auto;
+
+    div {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      margin: 1rem 0;
+
+      div {
+        position: relative;
+        input {
+          padding: 0.5rem 2.6rem;
+          width: 300px;
+          border-radius: 1rem;
+          font-size: 1rem;
+          outline: none;
+          border: 0;
+          margin: 0 0.4rem;
+
+          &::placeholder {
+            color: #ccc;
+          }
+        }
+
+        #error {
+          display: none;
+          text-align: left;
+          font-size: 0.8rem;
+          color: $light-red;
+
+          position: absolute;
         }
       }
     }
@@ -291,6 +340,62 @@ footer {
             border: 1px solid $cyan;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #features {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #team {
+    .container {
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+
+      .content {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  #testimonials {
+    .container {
+      flex-direction: column;
+    }
+
+    #cta {
+      width: 90%;
+      left: 3%;
+
+      form {
+        flex-direction: column;
+
+        input,
+        .btn {
+          margin: 2rem 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  footer {
+    .container {
+      img {
+        margin-top: 9rem;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
       }
     }
   }

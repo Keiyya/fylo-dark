@@ -132,7 +132,8 @@ header #header-content {
 #testimonials {
   background-color: #181f2a;
   padding-top: 2rem;
-  padding-bottom: 4rem; }
+  padding-bottom: 4rem;
+  position: relative; }
   #testimonials .container {
     display: flex;
     align-items: center;
@@ -156,6 +157,40 @@ header #header-content {
           font-size: 1rem; }
         #testimonials .container .card-header .card-title p {
           font-size: 0.6rem; }
+  #testimonials #cta {
+    position: absolute;
+    left: 25%;
+    background: #1c2431;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 1rem 1.4rem;
+    margin: auto; }
+    #testimonials #cta div {
+      text-align: center; }
+    #testimonials #cta form {
+      display: flex;
+      margin: 1rem 0; }
+      #testimonials #cta form div {
+        position: relative; }
+        #testimonials #cta form div input {
+          padding: 0.5rem 2.6rem;
+          width: 300px;
+          border-radius: 1rem;
+          font-size: 1rem;
+          outline: none;
+          border: 0;
+          margin: 0 0.4rem; }
+          #testimonials #cta form div input::placeholder {
+            color: #ccc; }
+        #testimonials #cta form div #error {
+          display: none;
+          text-align: left;
+          font-size: 0.8rem;
+          color: #ff4242;
+          position: absolute; }
 
 footer {
   background-color: #0b1523;
@@ -198,3 +233,30 @@ footer {
           footer .container .wrapper .icons div:hover {
             color: #65e2d9;
             border: 1px solid #65e2d9; }
+
+@media (max-width: 768px) {
+  #features .container {
+    grid-template-columns: 1fr; }
+  #team .container {
+    flex-direction: column; }
+    #team .container img {
+      width: 100%; }
+    #team .container .content {
+      width: 100%;
+      margin: 0; }
+  #testimonials .container {
+    flex-direction: column; }
+  #testimonials #cta {
+    width: 90%;
+    left: 3%; }
+    #testimonials #cta form {
+      flex-direction: column; }
+      #testimonials #cta form input,
+      #testimonials #cta form .btn {
+        margin: 2rem 0;
+        width: 100%; }
+  footer .container img {
+    margin-top: 9rem; }
+  footer .container .wrapper {
+    display: flex;
+    flex-direction: column; } }
