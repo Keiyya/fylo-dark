@@ -27,7 +27,7 @@ body {
   color: $white;
   background-image: url('../images/bg-curvy-desktop.svg');
   background-repeat: no-repeat;
-  background-position: 50% 35%;
+  background-position: 50% 23%;
   background-size: 100%;
 }
 
@@ -82,6 +82,11 @@ header {
       li {
         list-style: none;
         margin: 0 1rem;
+
+        a:hover {
+          font-weight: bold;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -320,6 +325,10 @@ footer {
         li {
           list-style: none;
           margin: 0.6rem;
+
+          a:hover {
+            font-weight: bold;
+          }
         }
       }
 
@@ -346,6 +355,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+  body {
+    background-image: url('../images/bg-curvy-mobile.svg');
+    background-position: 50% 15%;
+  }
+
   #features {
     .container {
       grid-template-columns: 1fr;
@@ -398,5 +412,11 @@ footer {
         flex-direction: column;
       }
     }
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    background-position: 50% 30%;
   }
 }

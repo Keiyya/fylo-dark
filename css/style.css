@@ -15,7 +15,7 @@ body {
   color: white;
   background-image: url("../images/bg-curvy-desktop.svg");
   background-repeat: no-repeat;
-  background-position: 50% 35%;
+  background-position: 50% 23%;
   background-size: 100%; }
 
 h1,
@@ -59,6 +59,9 @@ header nav {
     header nav ul li {
       list-style: none;
       margin: 0 1rem; }
+      header nav ul li a:hover {
+        font-weight: bold;
+        text-decoration: underline; }
 
 header #header-content {
   display: flex;
@@ -220,6 +223,8 @@ footer {
       footer .container .wrapper ul li {
         list-style: none;
         margin: 0.6rem; }
+        footer .container .wrapper ul li a:hover {
+          font-weight: bold; }
       footer .container .wrapper .icons {
         display: flex;
         align-items: center;
@@ -235,6 +240,9 @@ footer {
             border: 1px solid #65e2d9; }
 
 @media (max-width: 768px) {
+  body {
+    background-image: url("../images/bg-curvy-mobile.svg");
+    background-position: 50% 15%; }
   #features .container {
     grid-template-columns: 1fr; }
   #team .container {
@@ -260,3 +268,7 @@ footer {
   footer .container .wrapper {
     display: flex;
     flex-direction: column; } }
+
+@media (min-width: 769px) {
+  body {
+    background-position: 50% 30%; } }
